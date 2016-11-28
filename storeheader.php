@@ -6,21 +6,6 @@
                     <h1><a href="index.php"><span>Zarkasha</span></a></h1>  
                 </div>
 
-
-                <div class="col-sm-4 world">
-                    <div class="cart box_1">
-                        <a href="checkout.html">
-                        <img src="images/one.jpg" alt="Mountain View" style="border-radius: 50%; width: 50px; height: 50px;
-                                                                                 border: 1px solid #ccc; border-radius:50%;">
-                        </a> 
-                    </div>
-               </div>
-
-
-
-                 <div class="cart box_1">
-                 <a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a>
-                </div>
             
                 <div class="clearfix"> </div>
         </div>
@@ -45,8 +30,7 @@
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav nav_1">
                             <li><a href="index.php">Home</a></li>
-                            <li><a href="setting.php">Setting</a></li>
-                            <li><a href="account.html">Weather</a></li>
+                            <li><a href="storesetting.php">Setting</a></li>
                         </ul>
                      </div><!-- /.navbar-collapse -->
                   
@@ -59,15 +43,7 @@
                     <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
                     <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
                     <!---//pop-up-box---->
-                <div id="small-dialog" class="mfp-hide">
-                <div class="search-top">
-                        <div class="login">
-                                <input type="submit" value="tt">
-                                <input type="text" name="search" value="Search Member..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">                                  
-                        </div>
-                        <p> Member</p>
-                    </div>              
-                </div>               
+                         
 
                  <script>
                         $(document).ready(function() {

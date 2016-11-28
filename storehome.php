@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>User Home</title>
+<title>Store Home</title>
 <link href="css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -81,8 +81,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body >
 
 
+
 <!--header-->
-<?php include 'header.php'; ?>
+<?php include 'storeheader.php'; ?>
 <!--//header-->
 
 
@@ -104,7 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	        		<li>
 	          			<A HREF="outfit.html"></A><img src="images/1.jpg" alt="" src= "outfit.html">
 						<div class="tes animated wow fadeInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-							<a href="contact.php"><h2>Want help with your outfit today ?</h2></a>
+							<a href="storeform.php"><h2>Have new item in own store ?</h2></a>
 							
 						</div>
 	       			 </li>
@@ -134,98 +135,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!--//banner-->
 <!--content-->
-<div class="content">
-	<div class="container">
-		<div class="content-top">
-			<div class="content-top1">
-											<?php 
-							require_once 'connect.php';
-							$sql="SELECT * FROM userclothes u INNER JOIN user us on us.id=u.userid";
-							$query = mysqli_query($conn,$sql);
-							while($result = mysqli_fetch_assoc($query))
-							{
-						?>
-				<div class="col-md-3 col-md2 animated wow fadeInLeft" data-wow-delay=".5s">
-					<div class="col-md1 simpleCart_shelfItem">
 
-
-							<?php echo "<img class='img-responsive' src='uploads/".$result['clothe']."' alt='' />"; ?>
-						</a>
-						<?php echo "<h3><a href='other.php?do=".$result['userid']."'>";?><?php echo $result['name'];?></a></h3>
-						<div class="price">
-								<h5 class="item_price"></h5>
-								<a href="#" class="item_add">i just choosed this </a>
-								<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>	
-
-				<br>
-			
-				<!-- <div class="col-md-6 animated wow fadeInDown animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
-					<div class="col-md3">
-						<div class="up-t">
-							<h3>Flat 50% Offer</h3>
-						</div>
-					</div>
-				</div> -->
-			
-			<div class="clearfix"> </div>
-			</div>	
-				<?php }  ?>
-			<!-- <div class="content-top1">
-				<div class="col-md-3 col-md2 animated wow fadeInLeft" data-wow-delay=".5s">
-					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-							<img class="img-responsive" src="images/pi3.png" alt="" />
-						</a>
-						<h3><a href="single.html">shoroq</a></h3>
-						<div class="price">
-								<h5 class="item_price">$300</h5>
-								<a href="#" class="item_add">Add To Cart</a>
-								<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>	 -->
-			<!-- <div class="col-md-3 col-md2 animated wow fadeInLeft" data-wow-delay=".5s">
-					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-							<img class="img-responsive" src="images/pi2.png" alt="" />
-						</a>
-						<h3><a href="single.html">Trouser</a></h3>
-						<div class="price">
-								<h5 class="item_price">$300</h5>
-								<a href="#" class="item_add">Add To Cart</a>
-								<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>	 -->
-			<!-- <div class="col-md-3 col-md2 animated wow fadeInRight" data-wow-delay=".5s">
-					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-							<img class="img-responsive" src="images/pi6.png" alt="" />
-						</a>
-						<h3><a href="single.html">Trouser</a></h3>
-						<div class="price">
-								<h5 class="item_price">$300</h5>
-								<a href="#" class="item_add">Add To Cart</a>
-								<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>	
-			<div class="col-md-3 col-md2 cmn animated wow fadeInRight" data-wow-delay=".5s">
-					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-							<img class="img-responsive" src="images/pi8.png" alt="" />
-						</a>
-						<h3><a href="single.html">Palazoo</a></h3>
-						<div class="price">
-								<h5 class="item_price">$300</h5>
-								<a href="#" class="item_add">Add To Cart</a>
-								<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>	 -->
 <!--//content-->
 	<!-- <div class="con-tp">
 		<div class="container">
@@ -305,9 +215,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="clearfix"></div>
 		</div>
 	</div> -->
+	<div class="c-btm">
+		<div class="content-top1">
+			<div class="container">
+				<!-- <div class="col-md-3 col-md2 animated wow fadeInLeft" data-wow-delay=".5s">
+					<div class="col-md1 simpleCart_shelfItem">
+						<a href="single.html">
+							<img class="img-responsive" src="images/pi9.png" alt="" />
+						</a>
+						<h3><a href="single.html">john</a></h3>
+						<div class="price">
+								<h5 class="item_price"></h5>
+								<a href="#" class="item_add">great outfit</a>
+								<div class="clearfix"> </div>
+						</div>
+						
+					</div>
+				</div>	 -->
+		
+			<!-- <div class="col-md-3 col-md2 animated wow fadeInRight" data-wow-delay=".5s">
+					<div class="col-md1 simpleCart_shelfItem">
+						<a href="single.html">
+							<img class="img-responsive" src="images/pi12.png" alt="" />
+						</a>
+						<h3><a href="single.html">Formal</a></h3>
+						<div class="price">
+								<h5 class="item_price">$400</h5>
+								<a href="#" class="item_add">Add To Cart</a>
+								<div class="clearfix"> </div>
+						</div>
+						
+					</div>
+				</div>	 -->
+			<div class="clearfix"> </div>
+			</div>	
+		</div>
 	</div>
-	</div>
-	</div>
+
 
 
 <!--footer-->
