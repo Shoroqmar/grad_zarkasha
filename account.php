@@ -73,14 +73,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							$_SESSION['id']=$data['id'];
 							$_SESSION['email']=$data['email'];
 							$_SESSION['pass']=$data['pass'];
+							header("location: beg.php");
+							exit;
+						}}
+                        elseif($_SERVER['REQUEST_METHOD']=='POST'){
+                            
+                        $email = $_POST['email'];
+						$pass  = $_POST['password'];
+						$sql = "SELECT * from admin where email='$email' and password='$pass'";
+						$query = mysqli_query($conn,$sql);
+						$count = mysqli_num_rows($query);
+						$data  = mysqli_fetch_assoc($query);
+						if($count > 0 )
+						{
+							$_SESSION['id']=$data['adminId'];
+							$_SESSION['email']=$data['email'];
+							$_SESSION['pass']=$data['password'];
 							header("location: index.php");
 							exit;
 						}
+                            
+                            
+                        }
 
 						else 
 						{
 							echo 'Incorrect email or password' .mysqli_error($conn);
-						}					}
+						}					
 				 ?>
 					<span>Email Address</span>
 					<input type="text" name="email"> 

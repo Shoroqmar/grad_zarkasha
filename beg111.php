@@ -51,13 +51,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <!--header-->
 <div class="header">
-	
+	<div class="header-top">
+		<div class="container">
+				<div class="col-sm-4 logo animated wow fadeInLeft" data-wow-delay=".5s">
+					<h1><a href="index.html">Zarkasha</a></h1>	
+				</div>
 		
 	
 
 	
-            <?php include "header.php" ;?>	
+		
+			<div class="n-avigation">
+			
+				<nav class="navbar nav_bottom" role="navigation">
+				
 
+				   <!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+						<ul class="nav navbar-nav nav_1">
+							
+							<li class="dropdown mega-dropdown active">
+											
+								<div class="dropdown-menu mega-dropdown-menu">
+			
+						
+                            <li><a href="products.html">Home</a</li>
+							<li><a href="products.html">Setting</a></li>
+							<li><a href="account.html">Weather</a></li>
+							<li class="last"><a href="contact.html">Contact</a></li>
+						</ul>
+					 </div><!-- /.navbar-collapse -->
+				  
+				</nav>
+			</div>
+                </nav>
+    </div>
+    	</div>
 	</div>
 				
 		<div class="clearfix"> </div>
@@ -88,11 +117,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!--//content-->
 		<div class="container">
-            <div class="well ">
+            <div class="well-sm">
 			
-				<a href="outfit.php">
-					<div class="">
-						<div class="img-box"><img src="images/events.png" alt="image" class="img-responsive zoom-img img-center"></div>
+				<a href="outfit_type.php">
+					<div class="content-grid-effect slow-zoom vertical">
+						<div class="img-box"><img src="images/outfit.jpg" alt="image" class="img-responsive zoom-img img-center"></div>
 						<div class="info-box">
 							<div class="overlay">
 										
@@ -105,9 +134,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 			<div class="clearfix"></div>
 		
-			<a href="outfit.php">
-				<div class="">
-					<div class="img-box "><img src="images/casual.png" alt="image" class="img-responsive zoom-img img-center"></div>
+			<a href="weather.php">
+				<div class="content-grid-effect slow-zoom vertical">
+					<div class="img-box "><img src="images/wea.jpg" alt="image" class="img-responsive zoom-img img-center"></div>
 						<div class="info-box">
 							<div class="info-content simpleCart_shelfItem">
 									<h4></h4>	
@@ -118,9 +147,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 
                 <div class="clearfix"></div>
 		
-			<a href="outfit.php">
-				<div class="">
-					<div class="img-box "><img src="images/work.jpg" alt="image" class="img-responsive zoom-img img-center"></div>
+			<a href="index.php">
+				<div class="content-grid-effect slow-zoom vertical">
+					<div class="img-box "><img src="images/gohome.png" alt="image" class="img-responsive zoom-img img-center"></div>
 						<div class="info-box">
 							<div class="info-content simpleCart_shelfItem">
 									<h4></h4>	

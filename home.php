@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Zarkasha</title>
+<title>User Home</title>
 <link href="css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -75,41 +75,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/wow.min.js"></script>
 <script>
  new WOW().init();
-    </script>
-    <script>
-    <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
+</script>
 <!-- //animation-effect -->
-<!--    animation css-->
 </head>
 <body >
 
 
 <!--header-->
-<div class="header">
-	<div class="header-top">
-		<div class="container">
-				<div class="col-sm-4 logo animated wow fadeInLeft" data-wow-delay=".5s">
-
-					<h1><a href="index.html">Zarkasha</a></h1>	
-				</div>
-		
-			</div>
-			
-			<div class="col-sm-2 search animated wow fadeInRight" data-wow-delay=".5s">		
-			</div>
-				<div class="clearfix"> </div>
-		</div>
-	</div>
+<?php include 'header.php'; ?>
 <!--//header-->
-			<div class="clearfix"> </div>
 
 
 <div class="breadcrumbs">
@@ -122,59 +96,46 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <!--banner-->
- 
-    <a href="account.php">
-    	
-		<div class="container">
-			
-					<div class="row">
-						<div class="col-md-8 col-sm-8 col-lg-8 col-md-offset-2 text-center">
-							
-                            <img class="blink-image img-responsive" src="images/logo33.png">
-                            
-                            
-							<h1 class="to-animate" style="font-size:40px; color:#ffbd4a ; font-family:Herculanum;"> Click to continue  <br> </h1>
-							
-						</div>
-				
-			</div>
-		</div>
-    </a>
-    
 
-<!--
-<div class="banner">
-	<div class="matter-banner">
-	 	<div class="slider">
-	    	<div class="callbacks_container">
-	      		<ul class="rslides" id="slider">
-	        		<li>
-	          			<A HREF="outfit.html"></A>
-                        <img src="images/3422.jpg" alt="" src= "outfit.html" class="img-responsive" >
-						<div class="tes animated wow fadeInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-							
- 
-                                
-                           <img src="images/logo.png" alt="" src= "outfit.html" class="img-responsive" >
-							
-						</div>
-                        <div class = "animated wow fadeInUp animated"  data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp; position: absolute; right: 10%; top: 50%; text-align: right ;"> <h2 style="color:white; font-size:150%; ">Welcome to Zarkasha ...  </h2></div>
-
-                         
-                    
-	       			 </li>
-                   
-	      		</ul>
-	 	 	</div>
-		</div>
-	</div>
-	<div class="clearfix"> </div>
-</div>
--->
 <!--//banner-->
 <!--content-->
+<div class="content">
+	<div class="container">
+		<div class="content-top">
+			<div class="content-top1">
+											<?php 
+							require_once 'connect.php';
+							$sql="SELECT * FROM userclothes u INNER JOIN user us on us.id=u.userid";
+							$query = mysqli_query($conn,$sql);
+							while($result = mysqli_fetch_assoc($query))
+							{
+						?>
+				<div class="col-md-3 col-md2 animated wow fadeInLeft" data-wow-delay=".5s">
+					<div class="col-md1 simpleCart_shelfItem">
 
+
+							<?php echo "<img class='img-responsive' src='uploads/".$result['clothe']."' alt='' />"; ?>
+						</a>
+						<?php echo "<h3><a href='other.php?do=".$result['userid']."'>";?><?php echo $result['name'];?></a></h3>
+						<div class="price">
+								<h5 class="item_price"></h5>
+								<a href="#" class="item_add">i just choosed this </a>
+								<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>	
+
+				<br>
 			
+				
+			
+			<div class="clearfix"> </div>
+			</div>	
+				<?php }  ?>
+			
+	</div>
+	</div>
+	</div>
 
 
 <!--footer-->

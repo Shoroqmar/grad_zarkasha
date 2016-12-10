@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Admine Form</title>
+<title>Store Form</title>
 <link href="css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -127,7 +127,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							$material  = $_POST['mater'];
 							$sleevelength  = $_POST['sleeve'];
 							$bouttomlength  = $_POST['bottom'];
-							$image= $_POST['file'];
+							$image= basename($_FILES['fileToUpload']['name']);
 
 							$sql = "INSERT INTO clothes(BG,main,sub,pattern,mater,sleeve,bottom,file) VALUES('$backgroundcolor','$maincolor','$subcolor','$patterntype','$material','$sleevelength','$bouttomlength','$image')";
 

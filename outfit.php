@@ -4,7 +4,6 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<?php include 'header.php' ;?> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,12 +42,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!--header-->
-  <script type="text/ng-template" id="header.html"></script>
+    <header>
+            <?php include "header.php" ;?>	
 
-
-			
-				
-		<div class="clearfix"> </div>
+</header>
 			<!---pop-up-box---->  
 					<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
 					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
@@ -90,92 +87,54 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
 				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active">Register</li>
+				<li class="active">Your Clothe</li>
 			</ol>
 		</div>
 	</div>
+<a href="userform.php">
+<div class="well">
+    <div class="row center-block">
+    		<h2 style="color:#ffbd4a; text-align:center;">What clothe you want get sugesstion on ? </h2>
+    </div>
 
-<div class="container container-fluid panel">
-            
-<div class="clothe_type">
-    <div class="clothe">
-<img src="images/skirt.png" height = 80px width= 80px style="border:1px solid #ffbd4a ; " />
-Skirt <br>
-        </div>
-    <div class="clothe">
-<img src="images/shirt.png" height = 80px width= 80px   padding =10px style="border-bottom:1px solid #ffbd4a  ">Shirt .<br>
+<div class="row">
+    <img class=" img-responsive" src="images/skirt.png" height = 80px width= 80px> <h2 style="color:#ffbd4a; text-align:center;">Skirt</h2>
     </div>
-    <div class="clothe">
-<img src="images/trousers.png" height = 80px width= 80px >Trouser <br>
-    </div>
-    <div class="clothe">
-<img src="images/pants.png" height = 80px width= 80px style="border:1px solid #ffbd4a ; ">Pants <br>
-    </div>
-    <div class="clothe">
-<img src="images/coat.png" height = 80px width= 80px style="border:1px solid #ffbd4a ; ">Jacket <br>
-    </div>
-    <div class="clothe">
-<img src="images/tshirt.png" height = 80px width= 80px style="border:1px solid #ffbd4a ; ">T-Shirt <br>
-    </div>
-</div>
-</div>
-
-<!--
-<div class="container">
+    <br>
     
-		<h2>What clothe you have ? </h2>
- 		clothe types  		
-
-	
- 
-
-
-<div class = "rect" > 
-<img src="images/skirt.png">Skirt
-</div> 
-
-
-
-<br>
-
-				
-<div class = "rect" > 
-<img src="images/pants.png">Trouser
-</div> 
-
-
-  <br>
-
-
-<div class = "rect" > 
-<img src="images/shirt.png">Shirt
+    <div class="row">
+    <img class=" img-responsive" src="images/shirt.png" height = 80px width= 80px> <h2 style="color:#ffbd4a; text-align:center;">Shirt</h2>
     </div>
+        <br>
+
+    <div class="row">
+    <img class=" img-responsive" src="images/trousers.png" height = 80px width= 80px><h2 style="color:#ffbd4a; text-align:center;">Jeans</h2>
+    
+    </div><br>
+    
+    <div class="row">
+    <img class=" img-responsive" src="images/pants.png" height = 80px width= 80px><h2 style="color:#ffbd4a; text-align:center;">Trouser</h2>
+    
+    </div><br>
+    
+
+    <div class="row">
+    <img class=" img-responsive" src="images/tshirt.png" height = 80px width= 80px><h2 style="color:#ffbd4a; text-align:center;">T-Shirt</h2>
+    
+    </div><br>
+    
+    <div class="row">
+    <img class=" img-responsive" src="images/coat.png" height = 80px width= 80px><h2 style="color:#ffbd4a; text-align:center;">Jacket</h2>
+    
+    </div>
+    </a>
 <br>
 
-  
-<div class = "rect" > 
-<img src="images/tshirt.png">T-Shirt
-</div> 
 
 
-<br>
-<div class = "rect" > 
-<img src="images/coat.png">Jacket
-</div> 
-
-<br>
-
-
-<div class = "rect" > 
-<img src="images/trousers.png">Jeans
-</div> 
-
-
-
-
-		 	 
 </div>
--->
+
+
 <!-- 		 clothe div ending -->
 <!--footer-->
 <div class="footer">

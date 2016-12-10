@@ -3,31 +3,10 @@
     <div class="header-top">
         <div class="container">
                 <div class="col-sm-4 logo">
-                    <h1><a href="index.php"><span>Zarkasha</span></a></h1>  
+                    <h1><a href="home.php"><span>Zarkasha</span></a></h1>  
                 </div>
 
-
-                <div class="col-sm-4 world">
-                    <div class="cart box_1">
-                        <a href="checkout.html">
-                        <img src="images/one.jpg" alt="Mountain View" style="border-radius: 50%; width: 50px; height: 50px;
-                                                                                 border: 1px solid #ccc; border-radius:50%;">
-                        </a> 
-                    </div>
-               </div>
-
-
-
-                 <div class="cart box_1">
-                 <a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a>
-                </div>
-            
-                <div class="clearfix"> </div>
-        </div>
-    </div>
-        <div class="container">
-            <div class="head-top">
-            <div class="n-avigation">
+             <div class="n-avigation">
             
                 <nav class="navbar nav_bottom" role="navigation">
                 
@@ -44,14 +23,25 @@
                    <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav nav_1">
-                            <li><a href="index.php">Home</a></li>
+                            <li><a href="home.php">Home</a></li>
                             <li><a href="setting.php">Setting</a></li>
-                            <li><a href="account.html">Weather</a></li>
+                            <li><a href="weather.php">Weather</a></li>
+                            <li><a href="outfit_type.php">Help with outfit</a></li>
+                            <li></li>
+                            <li></li>
+                            <li><a href="profile.php">Profile</a></li>
                         </ul>
                      </div><!-- /.navbar-collapse -->
                   
                 </nav>
             </div>
+            
+                <div class="clearfix"> </div>
+        </div>
+    </div>
+        <div class="container">
+            <div class="head-top">
+           
             
                 
         <div class="clearfix"> </div>

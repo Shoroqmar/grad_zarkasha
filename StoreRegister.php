@@ -40,7 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <!--header-->
-<?php include 'storeheader.php'; ?>
+<?php include 'header.php'; ?>
 <!--//header-->
 
 

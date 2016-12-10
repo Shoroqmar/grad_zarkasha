@@ -14,7 +14,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- Custom Theme files -->
 <!--theme-style-->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -38,6 +37,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       });
     });
   </script>
+  <script type="text/javascript">
+ $(document).ready(function()
+ {
+ $("#insert").click(function(){
+ var title=$("#title").val();
+ var duration=$("#duration").val();
+ var price=$("#price").val();
+ var dataString="title="+title+"&duration="+duration+"&price="+price+"&insert=";
+ if($.trim(title).length>0 & $.trim(duration).length>0 & $.trim(price).length>0)
+ {
+ $.ajax({
+ type: "POST",
+ url:"http://localhost/phonegap/database/insert.php",
+ data: dataString,
+ crossDomain: true,
+ cache: false,
+ beforeSend: function(){ $("#insert").val('Connecting...');},
+ success: function(data){
+ if(data=="success")
+ {
+ alert("inserted");
+ $("#insert").val('submit');
+ }
+ else if(data=="error")
+ {
+ alert("error");
+ }
+ }
+ });
+ }return false;
+ });
+ });
+ </script>
   <!-- animation-effect -->
 <link href="css/animate.min.css" rel="stylesheet"> 
 <script src="js/wow.min.js"></script>
@@ -46,50 +78,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 <!-- //animation-effect -->
 </head>
-<body>
-<!--header-->
-<body>
+<body >
 <!--header-->
 <div class="header">
-	<div class="header-top">
-		<div class="container">
-				<div class="col-sm-4 logo animated wow fadeInLeft" data-wow-delay=".5s">
-					<h1><a href="index.html">Zarkasha</a></h1>	
-				</div>
-		
-	
 
-	
-		
-			<div class="n-avigation">
-			
-				<nav class="navbar nav_bottom" role="navigation">
-				
+	            <?php include "header.php" ;?>	
 
-				   <!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-						<ul class="nav navbar-nav nav_1">
-							
-							<li class="dropdown mega-dropdown active">
-											
-								<div class="dropdown-menu mega-dropdown-menu">
-			
-						
-                            <li><a href="products.html">Home</a</li>
-							<li><a href="products.html">Setting</a></li>
-							<li><a href="account.html">Weather</a></li>
-							<li class="last"><a href="contact.html">Contact</a></li>
-						</ul>
-					 </div><!-- /.navbar-collapse -->
-				  
-				</nav>
+			<!-- <div class="col-sm-4 world animated wow fadeInRight" data-wow-delay=".5s">
+					<div class="cart box_1">
+						<a href="checkout.html">
+						<h3> <div class="total">
+							<span class="simpleCart_total"></span></div>
+							<img src="images/cart.png" alt=""/></h3>
+						</a>
+						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+
+					</div> -->
 			</div>
-                </nav>
-    </div>
-    	</div>
-	</div>
-				
-		<div class="clearfix"> </div>
+			<!-- <div class="col-sm-2 number animated wow fadeInRight" data-wow-delay=".5s">
+					<span><i class="glyphicon glyphicon-phone"></i>085 596 234</span>
+					<p>Call me</p>
+				</div> -->
+
+	
+		
 			<!---pop-up-box---->   
 					<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
 					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
@@ -103,85 +115,105 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							
 							</form>
 						</div>
-						
+						<p>	Shopping</p>
 					</div>				
 				</div>
-
+				 <script>
+						$(document).ready(function() {
+						$('.popup-with-zoom-anim').magnificPopup({
+							type: 'inline',
+							fixedContentPos: false,
+							fixedBgPos: true,
+							overflowY: 'auto',
+							closeBtnInside: true,
+							preloader: false,
+							midClick: true,
+							removalDelay: 300,
+							mainClass: 'my-mfp-zoom-in'
+						});
+																						
+						});
+				</script>			
 	<!---->		
 		</div>
 	</div>
 </div>
 <!--banner-->
-
-<!--content-->
-
-<!--//content-->
-		<div class="container">
-            <div class="well-sm">
-			
-				<a href="outfit_type.php">
-					<div class="content-grid-effect slow-zoom vertical">
-						<div class="img-box"><img src="images/outfit.jpg" alt="image" class="img-responsive zoom-img img-center"></div>
-						<div class="info-box">
-							<div class="overlay">
-										
-							</div>
+<div class="banner">
+	<div class="matter-banner">
+	 	<div class="slider">
+	    	<div class="callbacks_container">
+	      		<ul class="rslides" id="slider">
+	        		<li>
+	          			<A HREF="outfit_type.html"></A><img src="images/1.jpg" alt="" src= "outfit.html">
+						<div class="tes animated wow fadeInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+							<a href="outfit_type.php"><h2>Want help with your outfit today ?</h2></a>
+							
 						</div>
-					
-				</a>
-			</div>
-		
-		
-			<div class="clearfix"></div>
-		
-			<a href="weather.php">
-				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box "><img src="images/wea.jpg" alt="image" class="img-responsive zoom-img img-center"></div>
-						<div class="info-box">
-							<div class="info-content simpleCart_shelfItem">
-									<h4></h4>	
-							</div>
-						</div>
-				</div>
-			</a>
-                
-                <div class="clearfix"></div>
-		
-			<a href="index.php">
-				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box "><img src="images/gohome.png" alt="image" class="img-responsive zoom-img img-center"></div>
-						<div class="info-box">
-							<div class="info-content simpleCart_shelfItem">
-									<h4></h4>	
-							</div>
-						</div>
-				</div>
-			</a>
-		
-                
-		
-	
-		<div class="clearfix"></div>
-                		<div class="clearfix"></div>
-
+	       			 </li>
+			 		 <li>
+	          			
+	       			 </li>
+					 <li>
+	          			
+	        		</li>	
+	      		</ul>
+	 	 	</div>
 		</div>
 	</div>
-  
+	<div class="clearfix"> </div>
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="well">
+                <div class="we">
+               <?php
+$url = file_get_contents("http://api.apixu.com/v1/current.json?key=aa456fd874f34932879144658161211&q=nablus");
+$data = json_decode($url);
+$temp = $data->current->temp_c;
+$temp_1 = $temp-7 ; 
+$temp_2 =$temp -1 ; 
+if ($temp <=25){
+    ?>
             
-            
+<h2 style="color:#FFC767;text-align:center;font-size:20px;">The tempreture is between "<?php echo $temp_1."-".$temp_2; ?>"</h2>
+                <br>
+    <h2 style="color:#FFC767;text-align:center;font-size:20px;">you should consider wearing jacket and more cozy clothes</h2>
+                       
+                
+               
+<div class="row">
+  <div class="span4"></div>
+  <div class="span4"><img class="center-block img-responsive" src="images/source.gif" /></div>
+  <div class="span4"></div>
+</div>
+               
+                
+            <?php
+} 
+if ( $temp >=27){
+    
+    echo '<span style="color:#FFC767;text-align:center;font-size:20px;">The weather is a little hot . </span>'; 
+    echo '<img src="images/.gif"  alt="hh"/>' ;
+    
+}
+                     
+                     
+                     
+                     ?>
+            </div>
+             </div>   
+        </div>
+    </div>
+<!--//banner-->
+<!--content-->
+
+</div>
+
+	
 <!--footer-->
 <div class="footer">
-	
-		<div class="footer-bottom">
-		<div class="container">
-
-		
-		
-			
-				<div class="clearfix"> </div>
-				<p class="footer-class animated wow fadeInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;"> © 2016 Zarkasha . All Rights Reserved </p>
-			</div>
-	</div>
+            <?php include "footer.php" ;?>	
 </div>
 <!--footer-->
 </body>

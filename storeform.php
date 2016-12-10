@@ -43,10 +43,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
-
-
 <!--header-->
-<?php include 'storeheader.php'; ?>
+<?php include 'header.php'; ?>
 <!--//header-->
 
 
@@ -285,7 +283,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 							
 								
-								<input type="submit" value="save it">
+								<input type="submit" value="Go for it">
 							</form>
 						</div>
 				
